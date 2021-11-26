@@ -1,10 +1,13 @@
+import React from 'react';
+import NavigationBar from './components/NavigationBar/NavigationBar.components';
+
 import './App.scss';
 
 function App() {
   return (
-    <div className="App">
-
-    </div>
+    <main>
+      <NavigationBar />
+    </main>
   );
 }
 
