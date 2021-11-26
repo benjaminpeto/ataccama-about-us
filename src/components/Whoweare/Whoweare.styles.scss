@@ -1,0 +1,35 @@
+div {
+  height: 50%;
+  margin-top: 192px;
+
+  div > h1::before {
+    color: #5E35B1;
+    content: "Who ";
+  }
+  
+  div > h1 {
+    font-size: 80px;
+    font-family: Gilroy-ExtraBold;
+    margin: 0 0 32px 228px;
+  }
+
+  .paragraph-wrapper {
+    margin: 0 228px 0 228px;
+    display: flex;
+    font-size: 20px;
+    text-align: left;
+    line-height: 30px;
+
+    p:first-child {
+      margin-right: 24px;
+    }
+
+    p:nth-child(2) {
+      margin-left: 24px;
+    }
+
+    strong {
+      font-family: Gilroy-ExtraBold;
+    }
+  }
+}
