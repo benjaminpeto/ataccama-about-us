@@ -1,5 +1,7 @@
 import React from "react";
 
+import CardSlider from "../CardSlider/CardSlider.components";
+
 import './Wheretofind.styles.scss';
 
 import { ReactComponent as ArrowLeft } from '../../assets/Arrow left.svg';
@@ -14,7 +16,7 @@ function WhereToFind() {
         <ArrowLeft className='arrow-left' />
         <ArrowRight className='arrow-right' />
       </div>
-      <div>cards</div>
+      <CardSlider />
     </div>
   );
 }
