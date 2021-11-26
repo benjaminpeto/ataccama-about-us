@@ -2,6 +2,8 @@ import React from 'react';
 
 import NavigationBar from './components/NavigationBar/NavigationBar.components';
 import WhoWeAre from './components/Whoweare/Whoweare.components';
+import Flow from './components/Flow/Flow.components';
+import WhereToFind from './components/Wheretofind/Wheretofind.components';
 
 import './App.scss';
 
@@ -10,6 +12,8 @@ function App() {
     <main>
       <NavigationBar />
       <WhoWeAre />
+      <Flow />
+      <WhereToFind />
     </main>
   );
 }

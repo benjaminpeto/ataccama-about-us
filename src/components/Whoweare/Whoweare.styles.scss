@@ -1,13 +1,12 @@
-div {
-  height: 50%;
+.intro-wrapper {
   margin-top: 192px;
 
-  div > h1::before {
+  h1::before {
     color: #5E35B1;
     content: "Who ";
   }
   
-  div > h1 {
+  h1 {
     font-size: 80px;
     font-family: Gilroy-ExtraBold;
     margin: 0 0 32px 228px;
@@ -16,9 +15,17 @@ div {
   .paragraph-wrapper {
     margin: 0 228px 0 228px;
     display: flex;
+    height: fit-content;
     font-size: 20px;
     text-align: left;
     line-height: 30px;
+
+    p {
+      width: 708px;
+      height: fit-content;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
 
     p:first-child {
       margin-right: 24px;

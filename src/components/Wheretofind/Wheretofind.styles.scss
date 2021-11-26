@@ -1,0 +1,40 @@
+.where-wrapper {
+
+  h1::before {
+  color: #5E35B1;
+  content: "Where ";
+  }
+
+  h1 {
+    font-family: Gilroy-ExtraBold;
+    font-size: 80px;
+    text-align: center;
+    margin: 98px 0 0 0;
+  }
+
+  p {
+    font-size: 20px;
+    text-align: center;
+    margin: 32px 376px;
+    line-height: 30px;
+
+    span {
+      color: #D6006D;
+    }
+  }
+
+  .arrows {
+    display: flex;
+    width: 1464px;
+    margin: 0 auto;
+    justify-content: flex-end;
+
+    .arrow-left {
+      margin-right: 12px;
+    }
+
+    .arrow-right {
+      margin-left: 12px;
+    }
+  }
+}
