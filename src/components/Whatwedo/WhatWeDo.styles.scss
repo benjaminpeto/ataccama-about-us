@@ -1,0 +1,66 @@
+.whatwedo-wrapper > {
+  display: flex;
+  flex-direction: row;
+
+  h1::before {
+    color: #5E35B1;
+    content: "What ";
+  }
+  
+  h1 {
+    font-size: 80px;
+    font-family: Gilroy-ExtraBold;
+    text-align: center;
+    margin: 240px 0 32px 0;
+  }
+
+  p {
+    max-width: 576px;
+    margin: 0 auto 24px auto;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  .main--wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 105px;
+    flex-direction: row;
+    overflow: hidden;
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      width: 576px;
+      margin-left: 228px;
+      margin-top: 136px;
+  
+      p {
+        font-size: 20px;
+        line-height: 30px;
+        text-align: left;
+        margin-top: 32px;
+  
+        strong {
+          font-family: Gilroy-ExtraBold;
+        }
+      }
+    }
+  
+    .image-wrapper > {
+      position: relative;
+
+      img:nth-child(2) {
+        position: absolute;
+        top: 3687px;
+        left: 1421px;
+      }
+      img:nth-child(3) {
+        position: absolute;
+        top: 4115px;
+        left: 858px;
+      }
+    }
+  }
+}
