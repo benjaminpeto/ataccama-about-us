@@ -1,0 +1,48 @@
+.footer-wrapper {
+  display: flex;
+  background-color: #F8F9FA;
+  border: 1px solid #e0e4e7;
+  justify-content: space-between;
+  align-items: center;
+  height: 91px;
+  margin-top: 35px;
+
+  div > ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    color: #868E96;
+    font-family: Gilroy-ExtraBold;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-wrapper {
+    padding-left: 228px;
+
+    ul > li:nth-child(2) {
+      margin: 0 31px 0 32px;
+    }
+  }
+
+  .social-wrapper {
+    display: flex;
+    align-items: center;
+    padding-right: 228px;
+
+    ul {
+      padding-top: 3px;    //fixed unordered list default settings
+    }
+
+    ul > li {
+      margin: 0 6px;
+    }
+
+    p {
+      font-size: 20px;
+      color: #868E96;
+      margin-left: 26.44px;
+    }
+  }
+}

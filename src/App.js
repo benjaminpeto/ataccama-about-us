@@ -5,6 +5,7 @@ import WhoWeAre from './components/Whoweare/Whoweare.components';
 import Flow from './components/Flow/Flow.components';
 import WhereToFind from './components/Wheretofind/Wheretofind.components';
 import WhatWeDo from './components/Whatwedo/WhatWeDo.components';
+import Footer from './components/Footer/Footer.components';
 
 import './App.scss';
 
@@ -16,6 +17,7 @@ function App() {
       <Flow />
       <WhereToFind />
       <WhatWeDo />
+      <Footer />
     </main>
   );
 }
