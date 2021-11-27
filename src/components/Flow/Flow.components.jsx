@@ -1,13 +1,13 @@
 import React from "react";
 
-import { ReactComponent as FlowSVG } from '../../assets/flow.svg';
-
 import './Flow.styles.scss';
+
+import SVGtoAnimate from "../SVGtoAnimate/SVGtoAnimate.components";
 
 function Flow() {
   return (
     <div className='flow-wrapper'>
-      <FlowSVG />
+      <SVGtoAnimate />
     </div>
   );
 }
