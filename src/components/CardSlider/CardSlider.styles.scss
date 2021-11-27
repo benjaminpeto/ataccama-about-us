@@ -1,7 +1,20 @@
+.arrows {
+  display: flex;
+  width: 1464px;
+  margin: 0 auto;
+  justify-content: flex-end;
+
+  .arrow-left {
+    margin-right: 12px;
+  }
+
+  .arrow-right {
+    margin-left: 12px;
+  }
+}
+
 .radient-cover {
-  background: linear-gradient(90deg,rgba(255,255,255,0) 85%, #ffffff 100%);
-  background: -webkit-linear-gradient(90deg,rgba(255,255,255,0) 85%, #ffffff 100%);
-  background: -moz-linear-gradient(90deg,rgba(255,255,255,0) 85%, #ffffff 100%);
+  background: linear-gradient(90deg,rgba(255,255,255,0) 92%, #ffffff 102%);
   z-index: 99;
 
   .card-slider {
