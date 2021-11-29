@@ -3,12 +3,11 @@ import React, { useEffect, useRef }  from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
-import { GSDevTools } from "gsap/GSDevTools";
 
 
 function SVGtoAnimate() {
   
-  gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, GSDevTools);
+  gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin);
   const ref = useRef(null);
   
   useEffect(() => {
@@ -73,9 +72,12 @@ function SVGtoAnimate() {
     gsap.fromTo(
       element.querySelector("#_22_"),
       {
+        scale: 0,
         opacity: 0,
+        transformOrigin: '50% 50%',
       },
       {
+        scale: 1,
         opacity: 1,
         scrollTrigger: {
           start: "1050 center",
@@ -86,9 +88,12 @@ function SVGtoAnimate() {
     gsap.fromTo(
       element.querySelector("#nationalities"),
       {
+        scale: 0,
         opacity: 0,
+        transformOrigin: '50% 50%',
       },
       {
+        scale: 1,
         opacity: 1,
         scrollTrigger: {
           start: "1050 center",
@@ -106,11 +111,119 @@ function SVGtoAnimate() {
         rotation: "+=1080",
         transformOrigin: '50% 50%',
         scrollTrigger: {
-          start: "1000 center",
+          start: "800 center",
           end: "600 top",
         },
       }
     );
+
+    // 10 offices
+
+    gsap.fromTo(
+      element.querySelector("#_10"),
+      {
+        x: 100,
+        opacity: 0,
+      },
+      {
+        x: 320,
+        opacity: 1,
+        scrollTrigger: {
+          start: "1355 center",
+          end: "850 top"
+        },
+      }
+    );
+
+    gsap.fromTo(
+      element.querySelector("#offices"),
+      {
+        x: 100,
+        opacity: 0,
+      },
+      {
+        x: 350,
+        opacity: 1,
+        scrollTrigger: {
+          start: "1375 center",
+          end: "850 top"
+        },
+      }
+    );
+
+    gsap.fromTo(
+      element.querySelector("#Office_icon"),
+      {
+        x: 1000,
+        opacity: 0,
+        scale: 1.6
+      },
+      {
+        x: 0,
+        opacity: 1,
+        scale: 1,
+        scrollTrigger: {
+          start: "1250 center",
+          end: "900 top"
+        },
+      }
+    );
+
+    // 350+ global clients
+
+    gsap.fromTo(
+      element.querySelector("#_350_"),
+      {
+        scale: 1.25,
+        transformOrigin: '50% 50%',
+        opacity: 0
+      },
+      {
+        scale: 1,
+        opacity: 1,
+        scrollTrigger: {
+          start: "1850 center",
+          end: "1400 top"
+        },
+      }
+    );
+
+    gsap.fromTo(
+      element.querySelector("#global_clients"),
+      {
+        scale: 1.35,
+        transformOrigin: '50% 50%',
+        opacity: 0
+      },
+      {
+        scale: 1,
+        opacity: 1,
+        scrollTrigger: {
+          start: "1850 center",
+          end: "1400 top"
+        },
+      }
+    );
+
+    gsap.fromTo(
+      element.querySelector("#Rocket_icon"),
+      {
+        scale: 0.3,
+        transformOrigin: '50% 50%',
+        x: -300,
+        y: 300
+      },
+      {
+        x: 0,
+        y: 0,
+        scale: 1,
+        scrollTrigger: {
+          start: "1700 center",
+          end: "1400 top"
+        },
+      }
+    );
+
 
     // Animate line on scroll
 
@@ -123,15 +236,6 @@ function SVGtoAnimate() {
     })
     .from("#Line_452", {drawSVG: 0}, 0)
 
-    /* gsap.timeline({
-      scrollTrigger: {
-        start: "530 center",
-        end: "350 top",
-      }
-    })
-    .from(".ellipse1", {drawSVG: "100% 100%"}, {drawSVG: "0% 100%"}, 0); */
-
-
     main.from(".ellipse1",
     {
       scrollTrigger: {
@@ -140,14 +244,6 @@ function SVGtoAnimate() {
       },
     drawSVG: "100% 100%"
     })
-    /* gsap.timeline({
-      scrollTrigger: {
-        start: "880 center",
-        end: "480 top",
-        markers: true,
-
-      }
-    }) */
 
     .from("#Line_543",
     {
@@ -163,6 +259,7 @@ function SVGtoAnimate() {
       {
         scale: 0.1,
         opacity: 0,
+        transformOrigin: '50% 50%',
       },
       {
         scale: 1,
@@ -202,8 +299,7 @@ function SVGtoAnimate() {
     gsap.timeline({
       scrollTrigger: {
         start: "1150 center",
-        end: "700 top",
-        markers: true
+        end: "700 top"
       }
     })
     .fromTo(".ellipse3", {drawSVG:"0% 0%"}, {drawSVG:"0% 100%" }, 0);
@@ -221,20 +317,122 @@ function SVGtoAnimate() {
       {
         scale: 0.1,
         opacity: 0,
+        transformOrigin: '50% 50%',
       },
       {
         scale: 1,
         opacity: 1,
         scrollTrigger: {
-          start: "1200 center",
-          end: "730 top",
+          start: "1250 center",
+          end: "750 top",
+        },
+      }
+    )
+
+    .from(".ellipse4",
+    {
+      scrollTrigger: {
+      start: "1340 center",
+      end: "850 top"
+      },
+    drawSVG: "100% 100%"
+    });
+
+    // gradient rectangle drawSVG doesn't work ??? used opacity as alternative
+    gsap.timeline({
+      scrollTrigger: {
+        start: "1355 center",
+        end: "850 top"
+      }
+    })
+    .fromTo("#Rectangle_2565", {opacity: 0}, {opacity: 1}, 0);
+
+    gsap.timeline({
+      scrollTrigger: {
+        start: "1450 center",
+        end: "930 top"
+      }
+    })
+    .fromTo("#Line_549", {drawSVG:"0% 0%"}, {drawSVG:"0% 100%" }, 0);
+
+    main.from(".ellipse5",
+    {
+      scrollTrigger: {
+      start: "1400 center",
+      end: "1000 top"
+      },
+    drawSVG: "100% 100%"
+    })
+
+    .from("#Line_548",
+    {
+      scrollTrigger: {
+      start: "1540 center",
+      end: "1200 top"
+      },
+    drawSVG: "100% 100%"
+    })
+
+    .fromTo(
+      element.querySelector("#Group_6146"),
+      {
+        scale: 0.1,
+        opacity: 0,
+        transformOrigin: '50% 50%',
+      },
+      {
+        scale: 1,
+        opacity: 1,
+        scrollTrigger: {
+          start: "1570 center",
+          end: "1070 top",
+        },
+      }
+    );
+
+    gsap.timeline({
+      scrollTrigger: {
+        start: "1730 center",
+        end: "1400 top"
+      }
+    })
+    .fromTo(".ellipse6", {drawSVG:"0% 0%"}, {drawSVG:"0% 100%" }, 0);
+
+    gsap.timeline({
+      scrollTrigger: {
+        start: "1760 center",
+        end: "1400 top"
+      }
+    })
+    .fromTo("#Line_550", {drawSVG:"0% 0%"}, {drawSVG:"0% 100%" }, 0);
+
+    main.fromTo(
+      element.querySelector("#Ellipse_778"),
+      {
+        opacity: 0,
+      },
+      {
+        opacity: 1,
+        scrollTrigger: {
+          start: "1770 center",
+          end: "1400 top",
+        },
+      }
+    )
+    .fromTo(
+      element.querySelector("#Arrow-2"),
+      {
+        opacity: 0,
+      },
+      {
+        opacity: 1,
+        scrollTrigger: {
+          start: "1750 center",
+          end: "1400 top",
         },
       }
     )
     
-
-
-    GSDevTools.create({animation:main});
   },[]);
 
 	return (
@@ -558,8 +756,8 @@ function SVGtoAnimate() {
 						stroke="#d6006d"
 						strokeWidth="8"
 					>
-						<ellipse cx="40" cy="39.5" rx="40" ry="39.5" stroke="none" />
-						<ellipse cx="40" cy="39.5" rx="36" ry="35.5" fill="none" />
+						<ellipse cx="40" cy="39.5" rx="40" ry="39.5" stroke="none" className="ellipse5" />
+						<ellipse cx="40" cy="39.5" rx="36" ry="35.5" fill="none" className="ellipse5" />
 					</g>
 				</g>
 				<g
@@ -594,8 +792,8 @@ function SVGtoAnimate() {
 						stroke="#d6006d"
 						strokeWidth="8"
 					>
-						<ellipse cx="40" cy="39.5" rx="40" ry="39.5" stroke="none" />
-						<ellipse cx="40" cy="39.5" rx="36" ry="35.5" fill="none" />
+						<ellipse cx="40" cy="39.5" rx="40" ry="39.5" stroke="none" className="ellipse6" />
+						<ellipse cx="40" cy="39.5" rx="36" ry="35.5" fill="none" className="ellipse6" />
 					</g>
 				</g>
 				<g
@@ -612,8 +810,8 @@ function SVGtoAnimate() {
 						stroke="#5e35b1"
 						strokeWidth="8"
 					>
-						<ellipse cx="40" cy="39.5" rx="40" ry="39.5" stroke="none" />
-						<ellipse cx="40" cy="39.5" rx="36" ry="35.5" fill="none" />
+						<ellipse cx="40" cy="39.5" rx="40" ry="39.5" stroke="none" className="ellipse4" />
+						<ellipse cx="40" cy="39.5" rx="36" ry="35.5" fill="none" className="ellipse4" />
 					</g>
 				</g>
 				<g
