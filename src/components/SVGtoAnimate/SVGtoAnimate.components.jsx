@@ -2,20 +2,24 @@ import React, { useEffect, useRef }  from "react";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { MotionPathPlugin } from "gsap/MotionPathPlugin";
+import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
+import { GSDevTools } from "gsap/GSDevTools";
 
 
 function SVGtoAnimate() {
   
-  gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
+  gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, GSDevTools);
   const ref = useRef(null);
   
   useEffect(() => {
     const element = ref.current;
+
     ScrollTrigger.defaults({
-      markers: true,
-      scrub: true
-    })
+      scrub: true,
+      ease: "none",
+    });
+
+    // 300+ Ataccamers
 
     gsap.to(
       element.querySelector("#_300_"),
@@ -50,7 +54,7 @@ function SVGtoAnimate() {
       {
         scale: 0.1,
         opacity: 0,
-        x: 1080
+        x: 1200
       },
       {
         scale: 1,
@@ -58,12 +62,180 @@ function SVGtoAnimate() {
         x: 100,
         y: 10,
         scrollTrigger: {
-          start: "400 center",
+          start: "top center",
           end: "800 center",
         },
       }
     );
-  }, []);
+
+    // 22+ nationalities
+
+    gsap.fromTo(
+      element.querySelector("#_22_"),
+      {
+        opacity: 0,
+      },
+      {
+        opacity: 1,
+        scrollTrigger: {
+          start: "1050 center",
+          end: "590 top"
+        },
+      }
+    );
+    gsap.fromTo(
+      element.querySelector("#nationalities"),
+      {
+        opacity: 0,
+      },
+      {
+        opacity: 1,
+        scrollTrigger: {
+          start: "1050 center",
+          end: "590 top"
+        },
+      }
+    );
+    gsap.fromTo(
+      element.querySelector("#Planet_icon"),
+      {
+        x: -1200,
+      },
+      {
+        x: 0,
+        rotation: "+=1080",
+        transformOrigin: '50% 50%',
+        scrollTrigger: {
+          start: "1000 center",
+          end: "600 top",
+        },
+      }
+    );
+
+    // Animate line on scroll
+
+    const main = gsap.timeline({
+      scrollTrigger: {
+        start: "330 center",
+        end: "200 top",
+        toggleActions: "restart pause resume pause"
+      }
+    })
+    .from("#Line_452", {drawSVG: 0}, 0)
+
+    /* gsap.timeline({
+      scrollTrigger: {
+        start: "530 center",
+        end: "350 top",
+      }
+    })
+    .from(".ellipse1", {drawSVG: "100% 100%"}, {drawSVG: "0% 100%"}, 0); */
+
+
+    main.from(".ellipse1",
+    {
+      scrollTrigger: {
+      start: "530 center",
+      end: "350 top",
+      },
+    drawSVG: "100% 100%"
+    })
+    /* gsap.timeline({
+      scrollTrigger: {
+        start: "880 center",
+        end: "480 top",
+        markers: true,
+
+      }
+    }) */
+
+    .from("#Line_543",
+    {
+      scrollTrigger: {
+      start: "880 center",
+      end: "480 top"
+      },
+    drawSVG: "100% 100%"
+    })
+
+    .fromTo(
+      element.querySelector("#Group_6145"),
+      {
+        scale: 0.1,
+        opacity: 0,
+      },
+      {
+        scale: 1,
+        opacity: 1,
+        scrollTrigger: {
+          start: "850 center",
+          end: "400 top",
+        },
+      }
+    )
+
+    gsap.timeline({
+      scrollTrigger: {
+        start: "1025 center",
+        end: "550 top",
+      }
+    })
+    .fromTo(".ellipse2", {drawSVG:"0% 0%"}, {drawSVG:"0% 100%" }, 0);
+
+    gsap.timeline({
+      scrollTrigger: {
+        start: "1050 center",
+        end: "590 top"
+      }
+    })
+    .fromTo("#Line_545", {drawSVG:"0% 0%"}, {drawSVG:"0% 100%" }, 0);
+
+    main.from("#Line_546",
+    {
+      scrollTrigger: {
+      start: "1150 center",
+      end: "650 top"
+      },
+    drawSVG: "100% 100%"
+    });
+
+    gsap.timeline({
+      scrollTrigger: {
+        start: "1150 center",
+        end: "700 top",
+        markers: true
+      }
+    })
+    .fromTo(".ellipse3", {drawSVG:"0% 0%"}, {drawSVG:"0% 100%" }, 0);
+
+    gsap.timeline({
+      scrollTrigger: {
+        start: "1250 center",
+        end: "800 top"
+      }
+    })
+    .fromTo("#Line_544", {drawSVG:"0% 0%"}, {drawSVG:"0% 100%" }, 0);
+
+    main.fromTo(
+      element.querySelector("#Group_5076"),
+      {
+        scale: 0.1,
+        opacity: 0,
+      },
+      {
+        scale: 1,
+        opacity: 1,
+        scrollTrigger: {
+          start: "1200 center",
+          end: "730 top",
+        },
+      }
+    )
+    
+
+
+    GSDevTools.create({animation:main});
+  },[]);
 
 	return (
 		<svg
@@ -368,8 +540,8 @@ function SVGtoAnimate() {
 						stroke="#5e35b1"
 						strokeWidth="8"
 					>
-						<ellipse cx="40" cy="39.5" rx="40" ry="39.5" stroke="none" />
-						<ellipse cx="40" cy="39.5" rx="36" ry="35.5" fill="none" />
+						<ellipse cx="40" cy="39.5" rx="40" ry="39.5" stroke="none" className="ellipse1" />
+						<ellipse cx="40" cy="39.5" rx="36" ry="35.5" fill="none" className="ellipse1" />
 					</g>
 				</g>
 				<g
@@ -404,8 +576,8 @@ function SVGtoAnimate() {
 						stroke="#5e35b1"
 						strokeWidth="8"
 					>
-						<ellipse cx="40" cy="39.5" rx="40" ry="39.5" stroke="none" />
-						<ellipse cx="40" cy="39.5" rx="36" ry="35.5" fill="none" />
+						<ellipse cx="40" cy="39.5" rx="40" ry="39.5" stroke="none" className="ellipse2" />
+						<ellipse cx="40" cy="39.5" rx="36" ry="35.5" fill="none" className="ellipse2" />
 					</g>
 				</g>
 				<g
@@ -458,8 +630,8 @@ function SVGtoAnimate() {
 						stroke="#5e35b1"
 						strokeWidth="8"
 					>
-						<ellipse cx="40" cy="39.5" rx="40" ry="39.5" stroke="none" />
-						<ellipse cx="40" cy="39.5" rx="36" ry="35.5" fill="none" />
+						<ellipse cx="40" cy="39.5" rx="40" ry="39.5" stroke="none" className="ellipse3" />
+						<ellipse cx="40" cy="39.5" rx="36" ry="35.5" fill="none" className="ellipse3" />
 					</g>
 				</g>
 				<g
