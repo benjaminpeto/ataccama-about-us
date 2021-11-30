@@ -224,7 +224,6 @@ function SVGtoAnimate() {
       }
     );
 
-
     // Animate line on scroll
 
     const main = gsap.timeline({
@@ -253,6 +252,8 @@ function SVGtoAnimate() {
       },
     drawSVG: "100% 100%"
     })
+
+    // currently of text
 
     .fromTo(
       element.querySelector("#Group_6145"),
@@ -311,6 +312,8 @@ function SVGtoAnimate() {
       }
     })
     .fromTo("#Line_544", {drawSVG:"0% 0%"}, {drawSVG:"0% 100%" }, 0);
+
+    //populating text
 
     main.fromTo(
       element.querySelector("#Group_5076"),
@@ -373,6 +376,8 @@ function SVGtoAnimate() {
     drawSVG: "100% 100%"
     })
 
+    // trusted by text
+
     .fromTo(
       element.querySelector("#Group_6146"),
       {
@@ -405,6 +410,8 @@ function SVGtoAnimate() {
       }
     })
     .fromTo("#Line_550", {drawSVG:"0% 0%"}, {drawSVG:"0% 100%" }, 0);
+
+    // circle arrow in the end
 
     main.fromTo(
       element.querySelector("#Ellipse_778"),
