@@ -1,6 +1,6 @@
-
 .last-card {
   display: flex;
+  cursor: pointer;
   flex-direction: column;
   height: 555px;
   width: 444px;
@@ -8,7 +8,11 @@
   border: solid 1px #DEE2E6;
   border-radius: 16px;
   color: #343A40;
-  z-index: -1;
+  transition: transform 300ms linear;
+
+  &:hover {
+    transform: scale(1.07);
+  }
 
   .last-card-title {
     display: flex;

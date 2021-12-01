@@ -28,7 +28,14 @@ nav {
       font-family: Gilroy-ExtraBold;
       font-size: 20px;
       color: #343A40;
+      cursor: pointer;
+
+      &:hover {
+        transition: 200ms ease-in-out;
+        color: #D6006D;
+      }
     }
+
     li:nth-child(2) {
       margin: 0 32px;
     }

@@ -15,11 +15,9 @@ function  CardSlider() {
         <ArrowLeft className='arrow-left' />
         <ArrowRight className='arrow-right' />
       </div>
-      <div className='radient-cover'>
-        <div className='card-slider'>
-          <Card />
-          <LastCard />
-        </div>
+      <div className='card-slider'>
+        <Card />
+        <LastCard />
       </div>
     </>
   );

@@ -21,6 +21,15 @@
   .nav-wrapper {
     padding-left: 228px;
 
+    ul > li {
+      cursor: pointer;
+
+      &:hover {
+        transition: 200ms ease-in-out;
+        color: #343A40;
+      }
+    }
+
     ul > li:nth-child(2) {
       margin: 0 31px 0 32px;
     }
