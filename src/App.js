@@ -11,14 +11,14 @@ import './App.scss';
 
 function App() {
   return (
-    <main>
+    <>
       <NavigationBar />
       <WhoWeAre />
       <Flow />
       <WhereToFind />
       <WhatWeDo />
       <Footer />
-    </main>
+    </>
   );
 }
 

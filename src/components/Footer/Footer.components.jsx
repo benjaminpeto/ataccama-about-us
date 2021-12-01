@@ -10,7 +10,7 @@ import { ReactComponent as Youtube } from '../../assets/youtube.svg';
 
 function  Footer() {
   return (
-    <div className='footer-wrapper'>
+    <footer className='footer-wrapper'>
       <div className='nav-wrapper'>
         <ul>
           <li>Privacy Policy</li>
@@ -29,7 +29,7 @@ function  Footer() {
         </ul>
         <p>&copy; Ataccama, 2021</p>
       </div>
-    </div>
+    </footer>
   );
 }
 

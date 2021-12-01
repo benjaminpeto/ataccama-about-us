@@ -10,7 +10,7 @@ import './WhatWeDo.styles.scss';
 
 function  WhatWeDo() {
   return (
-    <div className='whatwedo-wrapper'>
+    <section className='whatwedo-wrapper'>
       <h1>we do</h1>
       <p>We’re helping to build agile, data-driven organizations where data people have the power to drive change.</p>
 
@@ -29,7 +29,7 @@ function  WhatWeDo() {
 
       </div>
 
-    </div>
+    </section>
   );
 }
 
