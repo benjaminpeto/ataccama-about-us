@@ -19,10 +19,15 @@
 
   .card-slider {
     display: grid;
-    margin: 49px 0 0 228px;
-    grid-template-columns: repeat(4, 1fr);
+    margin-top: 49px;
+    padding-left: 228px;
+    grid-template-columns: repeat(7, 1fr);
     grid-auto-rows: auto;
     grid-gap: 66px;
-    overflow: hidden;
+    overflow: scroll;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 }

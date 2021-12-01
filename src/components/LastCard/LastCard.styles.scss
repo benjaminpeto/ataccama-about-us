@@ -1,0 +1,66 @@
+
+.last-card {
+  display: flex;
+  flex-direction: column;
+  height: 555px;
+  width: 444px;
+  background: #fff 0% 0% no-repeat;
+  border: solid 1px #DEE2E6;
+  border-radius: 16px;
+  color: #343A40;
+  z-index: -1;
+
+  .last-card-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    h3 {
+      font-size: 34px;
+      font-family: Gilroy-ExtraBold;
+      width: 150px;
+      text-align: left;
+      margin: 32px 0 32px 49px;
+    }
+
+    .img-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 24px;
+      width: 96px;
+      height: 96px;
+      background-color: #EDE7F6;
+      border-radius: 10px;
+    }
+  }
+
+  .last-card-description-wrapper > {
+    display: flex;
+
+    p {
+      font-size: 20px;
+      text-align: left;
+      line-height: 25px;
+      margin: 0 48px 32px 48px;
+    }
+  }
+
+  .last-card-cities {
+    display: flex;
+    flex-flow: row wrap;
+    padding-left: 48px;
+    gap: 15px;
+
+    div {
+      display: inline-block;
+      background-color: #D6006D;
+      color: #fff;
+      font-family: Gilroy-ExtraBold;
+      font-size: 20px;
+      padding: 12px 15px 9px 15px;
+      border-radius: 25px;
+      width: fit-content;
+    }
+  }
+}

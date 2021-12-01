@@ -11,7 +11,7 @@ function Card() {
     <>
       {
         cardData.map(card => (
-          <div key={card.id} className='card-element'>
+          <div key={card.id} className="card-element">
 
             <div className='card-title-wrapper'>
               <h3>{card.city}</h3>
@@ -40,7 +40,6 @@ function Card() {
                 </h4>
                 <h5>Openings</h5>
               </div>
-              
             </div>
 
           </div>
